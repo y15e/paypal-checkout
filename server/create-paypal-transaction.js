@@ -13,14 +13,17 @@ exports.handler = async (event) => {
     order = await payPalClient.client().execute(request);
   } catch (err) {
     console.error(err);
-    //return res.send(500);
+    const errorResponse = {
+      statusCode: 500
+    };
+    return errorResponse;
   }
 
   const response = {
     statusCode: 200,
     body: JSON.stringify({
       orderID: order.result.id
-    }),
+    })
   };
   
   return response;
