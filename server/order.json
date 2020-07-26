@@ -1,0 +1,56 @@
+{
+  "intent": "CAPTURE",
+  "application_context": {
+    "return_url": "https://paypal.y15e.com/complete.html",
+    "cancel_url": "https://paypal.y15e.com/checkout.html",
+    "brand_name": "Yoshihiro Watanabe Example Store",
+    "locale": "en-US",
+    "landing_page": "BILLING",
+    "shipping_preference": "SET_PROVIDED_ADDRESS",
+    "user_action": "CONTINUE"
+  },
+  "purchase_units": [
+    {
+      "reference_id": "PUHF",
+      "description": "Sporting Goods",
+
+      "custom_id": "CUST-HighFashions",
+      "soft_descriptor": "HighFashions",
+      "amount": {
+        "currency_code": "USD",
+        "value": "65.00",
+        "breakdown": {
+          "item_total": {
+            "currency_code": "USD",
+            "value": "65.00"
+          }
+        }
+      },
+      "items": [
+        {
+          "name": "The PayPal Wars",
+          "sku": "sku01",
+          "unit_amount": {
+            "currency_code": "USD",
+            "value": "65.00"
+          },
+          "quantity": "1",
+          "category": "PHYSICAL_GOODS"
+        }
+      ],
+      "shipping": {
+        "method": "United States Postal Service",
+        "address": {
+          "name": {
+            "full_name":"John",
+            "surname":"Doe"
+          },
+          "address_line_1": "5 Temasek Boulevard",
+          "address_line_2": "#09-01 Suntec Tower Five",
+          "postal_code": "038985",
+          "country_code": "SG"
+        }
+      }
+    }
+  ]
+}
